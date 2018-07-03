@@ -9,12 +9,12 @@ client.on('ready', () => {
 });
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Scrpit By ┃ KillerFox`);
+      console.log(`Desert Bot- Scrpit By ┃ PrinceMC`);
         console.log(`----------------`);
       console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ NoNo ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` Bot By NoNo | ^help `,"http://twitch.tv/S-F")
+client.user.setGame(` ^inv | ^help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 client.on('message', message => {
@@ -46,6 +46,8 @@ if (message.content.startsWith(prefix + 'help')) {
 	 ^bot | To Get Info About The Bot
 	 
 	 ^info | To Get Info About The Bot
+
+         | Bot By :heart: ! `NoNo'.#0714 ! |
 `)
   message.author.sendEmbed(embed)
 
@@ -125,7 +127,7 @@ if (message.content.startsWith(prefix + "uptime")) {
 });
 
 client.on('message', message => {
-   if (message.content.startsWith("+id")) {
+   if (message.content.startsWith("^id")) {
                 if(!message.channel.guild) return message.reply('**هذا الامر فقط في السيرفرات وشكرا**');
 
                var mentionned = message.mentions.users.first();
@@ -341,7 +343,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 });
 
 client.on('message', msg => {
-  const DiscordLink = ["discord.gg", "discordapp.com/invite", "gg", "discord.gg"];
+  const DiscordLink = ["discord.gg", "discordapp.com/invite", "discord.gg"];
   if( DiscordLink.some(word => msg.content.includes(word)) ) {
     msg.reply(`⛔ | يمنع نشر روابط الدعوة .. انتبه لنفسك`)
     msg.delete();
@@ -458,7 +460,7 @@ member.addRole(member.guild.roles.find('name', 'غير مفعل'));
 client.on('message', message => {                      
     if(!message.channel.guild) return;
        if(message.content.startsWith(prefix + 'active')) {
-        let modlog = client.channels.find('name', 'c');
+        let modlog = client.channels.find('name', 'activate');
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
        message.channel.sendMessage(`اضغط على الصح عشان تتفعل`).then(msg => {
         
@@ -565,7 +567,7 @@ client.on('guildMemberAdd', member => {
         .addField(':loudspeaker: | نورت السيرفر يا قلبي' , `Welcome to server **${member.guild.name}**`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`**[${member.guild.memberCount}]**`)
-     .setFooter("Speed Bot")
+     .setFooter("PrinceBot")
         .setTimestamp()
    
       channel.sendEmbed(embed);
