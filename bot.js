@@ -617,10 +617,6 @@ var secreT = [
     }
 });
 
-client.on('ready', () => {
-   console.log(`Logged in as $(client.user.tag)!`);
-
-   });
    
    // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
